@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Nerko+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sevillana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --light-blue: #a8d5e2; /* Azul claro */
+    --sky-blue: #7ec8e3;   /* Azul céu */
+    --medium-blue: #0091d5; /* Azul médio */
+    --dark-blue: #005a9c; /* Azul escuro */
+    --background-blue: #e0f0f9; /* Cor de fundo azul muito claro */
+    --font-primary: 'Playfair Display', serif; /* Fonte primária */
+    --font-secondary: 'Sevillana', cursive; /* Fonte secundária */
+}
+
+body {
+    background-color: var(--background-blue);
+    font-family: var(--font-primary);
+    color: var(--dark-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--font-secondary);
+    color: var(--dark-blue);
+    font-size: 3em;
+}
+
+h3 {
+    color: var(--sky-blue);
+    font-family: var(--font-primary);
+}
+
+.mensagem {
+    font-size: 1.5em;
+    color: var(--medium-blue);
+    margin-top: 20px;
+}
+
+.box {
+    border: 1rem solid var(--sky-blue);
+    display: inline-block;
+    font-size: 2em;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--light-blue); /* Fundo das caixas */
+    color: var(--dark-blue); /* Cor do texto dentro das caixas */
+    border-radius: 8px; /* Bordas arredondadas */
+}

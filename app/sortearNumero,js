@@ -1,0 +1,16 @@
+const menorvalor = 1; 
+const maiorvalor = 100;
+const numeroSecreto = gerarNumeroaleatorio();
+
+function gerarNumeroaleatorio() {
+    return parseInt(Math.random() * maiorvalor + 1); 
+}
+
+console.log(numeroSecreto);
+
+const elementoMenorvalor = document.getElementById('menor-valor');
+elementoMenorvalor.innerHTML = menorvalor;
+
+const elementoMenorvalor = document.getElementById('maior-valor');
+elementoMenorvalor.innerHTML = maiorvalor;
+
