@@ -1,1 +1,1 @@
-# Numero_Secreto-2024
+# numero-magico-2024
