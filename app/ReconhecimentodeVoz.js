@@ -1,22 +1,22 @@
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
-const chute = document.getElementById ('chute')
+const chute = document.getElementById('chute');
+const recognition = new SpeechRecognition();
+recognition.lang = 'pt-BR';
+recognition.start();
 
-  const recognition = new SpeechRecognition();
-  recognition.lang = 'pt-br'
-  recognition.start()
+recognition.addEventListener('result', oneSpeak);
 
-  recognition.addEventListerner('result, on Speak')
+function oneSpeak(e) {
+  const chute = e.results[0][0].transcript;
+  exibeChuteNaTela(chute);
+}
 
-  function onSpeak(e){
-    console.log(e.results [0] [0].transcript)
-    exibeChuteNaTela(chute)
-  }
-
-  function exibeChuteNaTela(chute) {
-      ElementoChute.innerHTML = '
-      <div>Você disse </div>
-      <span class="box"> $ {chute} </span>
-      `
-  }
+function exibeChuteNaTela(chute) {
+  const elementoChute = document.getElementById('chute');
+  elementoChute.innerHTML = `
+    <div>Você disse:</div>
+    <span class="box">${chute}</span>
+  `;
+}
