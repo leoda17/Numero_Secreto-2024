@@ -10,7 +10,12 @@ function verificaValorChuteValido(chute){
     if( numero === numeroSecreto){
         document.body.innerHTML = `<h2> Voce acertou!!!</h2>
         <h3> O número secreto era ${numeroSecreto}</h3>`
-      }
+     
+    } else if(numero > numeroSecreto) {
+        elementoChute.innerHTML += `<div> O número secreto é menor </div>`
+    } else {
+        elementoChute.innerHTML += `<div> O número sercreto é maior </div>`
+    }
 }
 
 function chuteForInvalido(numero){
